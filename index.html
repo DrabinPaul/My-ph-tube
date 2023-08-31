@@ -17,23 +17,46 @@
                 <img src="./images/Logo.png" alt="">
             </div>
             <div class="navbar-center">
-                <button class="bg-[red] text-white px-7 py-2 rounded">Sort by view</button>
+                <button class="bg-gray-200 text-[#252525] font-medium px-7 py-2 rounded">Sort by view</button>
             </div>
             <div class="navbar-end">
-                <button class=" bg-[red] text-white px-6 py-2 rounded">Blog</button>
+                <button id="blogButton" class=" bg-[red] text-white px-6 py-2 rounded">Blog</button>
             </div>
         </div>
         <hr class="w-[1280px] m-auto mt-6">
     </header>
-    <main>
-        <section>
-            <div id="button-container" class="tabs justify-center p-5 gap-3">
-                <button class="bg-[red] text-white px-6 py-2 rounded">All</button>
-                <button class="bg-[red] text-white px-6 py-2 rounded">Music</button>
-                <button class="bg-[red] text-white px-6 py-2 rounded">Comedy</button>
-                <button class="bg-[red] text-white px-6 py-2 rounded">Drawing</button>
+    <main class="max-w-screen-xl mx-auto">
+
+        <!-- buttons container  -->
+        <div id="button-container" class="tabs justify-center p-5 gap-3">
+
+        </div>
+
+        <!-- card container  -->
+        <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-5 pb-5">
+
+            <div class="card card-compact  bg-base-100 shadow-xl border">
+                <figure><img class="rounded" src="./images/img1.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <div class="avatar flex">
+                        <div class="w-20 rounded-full">
+                            <div>
+                                <img class="" src="./images/Icon.png" />
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="card-title">Shoes! whose shoes does he choose</h2>
+                            <p>Chirstian Morgan</p>
+                            <p>92k views</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+
+
+        <!-- card container  -->
+
 
     </main>
 
