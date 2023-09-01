@@ -25,27 +25,26 @@ const handleCategory = async () => {
 const handleCategoryId = async (categoryId) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
     const data = await res.json();
+    console.log(categoryId);
 
     const cardContainer = document.getElementById('card-container');
-    cardContainer.innerHTML = '';
-    data.data.forEach((cardDetails) => {
-        console.log(cardDetails.authors[0].profile_picture);
+    cardContainer.innerHTML = ' ';
+    data.data?.forEach((cardDetails) => {
+        // console.log(cardDetails.others.views); 
 
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="card card-compact  bg-base-100 shadow-xl">
-        <figure><img class="rounded" src=${cardDetails.thumbnail} /></figure>
-        <div class="card-body">
+        <figure><img class="rounded w-full h-[200px] md:h-[150px] md:w-[300px]" src=${cardDetails.thumbnail} /></figure>
+        <div class="card-body h-36">
             <div class="avatar flex">
-                <div class="w-20 rounded-full">
-                    <div>
-                        <img src=${cardDetails.authors[0].profile_picture} />
-                    </div>
+                <div class="w-14 h-14 rounded-full  mr-3">
+                        <img class="w-[40px] h-[40px]" src=${cardDetails.authors[0].profile_picture} />
                 </div>
                 <div>
                     <h2 class="card-title">${cardDetails?.title}</h2>
-                    <p>${cardDetails.authors[0].profile_name}</p>
-                    <p>${cardDetails?.others.views} views</p>
+                    <p class="text-base font-medium">${cardDetails.authors[0].profile_name}</p>
+                    <p class="font-medium">${cardDetails?.others.views} views</p>
                 </div>
             </div>
         </div>
@@ -59,3 +58,4 @@ const handleCategoryId = async (categoryId) => {
 
 };
 handleCategory();
+handleCategoryId('1000')
