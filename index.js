@@ -25,7 +25,6 @@ const handleCategory = async () => {
 const handleCategoryId = async (categoryId) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
     const data = await res.json();
-    console.log(categoryId);
 
     const cardContainer = document.getElementById('card-container');
     const drawContainer = document.getElementById('drawing-container');
@@ -44,7 +43,6 @@ const handleCategoryId = async (categoryId) => {
         let displayTime = cardDetails.others.posted_date;
         let hours = Math.floor((displayTime % (3600 * 24)) / 3600);
         const minutes = Math.floor((displayTime % 3600) / 60);
-        console.log(displayTime);
 
         div.innerHTML = `
         <div class="card card-compact bg-base-100">
