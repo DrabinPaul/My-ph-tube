@@ -11,19 +11,19 @@
 
 <body>
     <!-- navbar section  -->
-    <header class="max-w-screen-xl mx-auto pt-6 pb-3">
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
+    <header class="max-w-screen-xl mx-auto pt-6 ">
+        <div class="navbar bg-base-100 grid grid-cols-1 md:grid-cols-3 px-0 md:px-5 lg:px-0">
+            <div class="justify-center md:justify-start pb-3">
                 <img src="./images/Logo.png" alt="">
             </div>
-            <div class="navbar-center">
-                <button class="bg-gray-200 text-[#252525] font-medium px-7 py-2 rounded">Sort by view</button>
+            <div class="justify-center pb-3">
+                <button id="sortButton" class="bg-gray-200 text-[#252525] font-medium px-7 py-2 rounded">Sort by view</button>
             </div>
-            <div class="navbar-end">
+            <div class="justify-center md:justify-end pb-3">
                 <button id="blogButton" class=" bg-[red] text-white font-medium px-6 py-2 rounded">Blog</button>
             </div>
         </div>
-        <hr class="w-[1280px] m-auto mt-6">
+        <hr class=" w-[390px] md:w-[730px] lg:w-[1280px] m-auto mt-6">
     </header>
     <main class="max-w-screen-xl mx-auto px-5">
 
@@ -36,15 +36,23 @@
         <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-5 pb-5">
 
             <!-- <div class="card card-compact  bg-base-100 shadow-xl border">
-                <figure><img class="rounded w-full h-[200px] md:h-[150px] md:w-[300px]" src="./images/img1.jpg" alt="Shoes" /></figure>
+                <figure class="relative">
+                    <img class="rounded-lg w-full h-[200px] md:h-[150px] md:w-[300px]" src="./images/img1.jpg" alt="Shoes" />
+                    <p class="font-medium absolute top-24 right-0 bg-black text-white p-2 m-2 rounded">92k views</p>
+                </figure>
                 <div class="card-body h-36">
                     <div class="avatar flex">
                         <div class=" w-14 h-14 rounded-full mr-3">
-                            <img class="" src="./images/img3.jpeg" />
+                            <img class="w-[40px] h-[40px]" src="./images/img3.jpeg" />
                         </div>
                         <div>
                             <h2 class="card-title">Shoes! whose shoes does he choose</h2>
-                            <p class="text-base font-medium">Chirstian Morgan</p>
+                            <div class="text-base font-medium flex items-center">
+                                <p>Olivia Mitchell</p>
+                                <div class="w-[20px] h-[20px] mr-14">
+                                    <img  src="./images/tick2.png" alt="">
+                                </div>
+                            </div>
                             <p class="font-medium">92k views</p>
                         </div>
                     </div>
@@ -52,9 +60,14 @@
             </div> -->
         </div>
 
+        <div id="drawing-container" class="hidden">
+            <div class="flex justify-center mt-10">
+                <img  src="./images/Icon.png" alt=""/>
+          </div>
+           <p class="text-4xl font-bold text-center pt-2">Oops!! Sorry, There is no<br>
+           content here</p>
 
-        <!-- card container  -->
-
+        </div>
 
     </main>
 
